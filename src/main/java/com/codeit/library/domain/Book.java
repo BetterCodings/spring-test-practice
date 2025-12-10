@@ -46,6 +46,18 @@ public class Book {
         this.publishedDate = publishedDate;
     }
 
+    public Book(Long id, String title, String author, String isbn, Integer price) {
+        validateTitle(title);
+        validateAuthor(author);
+        validatePrice(price);
+
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.isbn = isbn;
+        this.price = price;
+    }
+
     public void updateInfo(String title, Integer price) {
         if (title != null) {
             validateTitle(title);
