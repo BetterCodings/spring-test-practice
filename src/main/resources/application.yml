@@ -1,13 +1,15 @@
 spring:
   application:
     name: library-management
-  
+
+  # h2 설정
   datasource:
     url: jdbc:h2:mem:librarydb
     driver-class-name: org.h2.Driver
     username: sa
     password:
-  
+
+  # h2 웹으로 확인하기 위한 설정
   h2:
     console:
       enabled: true
